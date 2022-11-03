@@ -96,4 +96,54 @@ myVar = "John"
 MYVAR = "John"
 myvar2 = "John"
 
+"""in python print() function is used to output variables.
+In the print() function, you output multiple variables, separated by a comma.
+also use the + operator to output multiple variables.
+For numbers, the + character works as a mathematical operator.
+In the print() function, when you try to combine a string and a number with the + operator, Python will give you an error
+The best way to output multiple variables in the print() function is to separate them with commas, which even support different data type """
+
+var1= "python is awesome"
+print(var1)
+
+var2= "you are "
+var3= "so beautiful "
+var4= "baba "
+print(var2,var3,var4)
+print(var2 + var3 + var4)
+num1= 1
+num2= 2
+print(num1 + num2)
+#if we try to add string and number together using + it will throw us error, so we use comma
+print(var2, num2)
+
+"""python global variables
+Variables that are created outside of a function are known as global variables.
+Global variables can be used by everyone, both inside of functions and outside.
+If you create a variable with the same name inside a function, this variable will be local, 
+and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value."""
+x= "awesome" #global variable
+def my_func():
+    print("python is " + x)
+
+my_func()
+
+x= "amazing" #global variable
+def func():
+    x= "awesome" #local variable
+    print("python is "+ x )
+func()
+print(x)
+
+"""the global keyword...
+If you use the global keyword, the variable belongs to the global scope.
+To change the value of a global variable inside a function, refer to the variable by using the global keyword"""
+
+def name():
+    global x 
+    x= "beautiful"
+    print("you are so "+ x)
+name()
+print(x)
+
 
